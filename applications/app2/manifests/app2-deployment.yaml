@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app2
-        image: alimah181188/app2:v1
+        image: docker.io/alimah181188/app2:v1
         ports:
         - containerPort: 8080
       imagePullSecrets:
