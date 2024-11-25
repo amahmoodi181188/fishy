@@ -17,6 +17,8 @@ spec:
         image: alimah181188/app2:v1
         ports:
         - containerPort: 8080
+      imagePullSecrets:
+      - name: dockerhub-secret
 ---
 apiVersion: v1
 kind: Service
