@@ -1,5 +1,5 @@
 # Dockerfile
-FROM golang:1.16
+FROM golang:1.19
 
 WORKDIR /app
 # Copy go.mod and go.sum first to leverage Docker layer caching
