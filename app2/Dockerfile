@@ -1,16 +1,17 @@
-# Dockerfile
 FROM golang:1.19
-
 WORKDIR /app
+
 # Copy go.mod and go.sum first to leverage Docker layer caching
-COPY go.mod .
+COPY go.mod .             
 
 # Download dependencies
-RUN go mod download
-COPY . .
+RUN go mod download  
 
-RUN go build -o main .
+# Copy the application code
+COPY . .        
 
-CMD ["/app/main"]
-EXPOSE 8080
+# Build the application
+RUN go build -o app1 .
 
+# Set the startup command
+CMD ["./app1"]

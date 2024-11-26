@@ -1,17 +1,7 @@
-// main.go for App 2
 package main
 
-import (
-    "fmt"
-    "net/http"
-)
-
-func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "When in doubt, fish!")
-}
+import "fmt"
 
 func main() {
-    http.HandleFunc("/", handler)
-    http.ListenAndServe(":8080", nil)
+    fmt.Println("When in doubt, fish!")
 }
-
