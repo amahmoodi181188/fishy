@@ -1,3 +1,3 @@
-module app1
+module app2
 
 go 1.19
