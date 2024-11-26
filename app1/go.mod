@@ -1,3 +1,4 @@
-module app2
+module fishing-app
 
 go 1.19
+

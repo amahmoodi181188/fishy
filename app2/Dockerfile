@@ -1,12 +1,17 @@
 FROM golang:1.19
 WORKDIR /app
 
-COPY go.mod .               
+# Copy go.mod and go.sum first to leverage Docker layer caching
+COPY go.mod .             
 
+# Download dependencies
 RUN go mod download  
 
+# Copy the application code
 COPY . .        
 
+# Build the application
 RUN go build -o app2 .
 
+# Set the startup command
 CMD ["./app2"]
